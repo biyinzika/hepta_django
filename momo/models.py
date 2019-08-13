@@ -9,6 +9,7 @@ from momoapi import *
 class MomoRequest(models.Model):
     '''
     MomoRequest model for storing requests as request_text
+    payment status to be added
     '''
     request_text = models.CharField(max_length=240)
     description = models.TextField(blank=True, null=True)
@@ -23,7 +24,7 @@ class CollectionRequest(models.Model):
     '''
     Collection request model
     Trigger a collection_request whenever a new MomoRequest object is created (foreign key as momo_request)
-    Status of payment either pending or paid as in choices.
+    Status of payment either pending or paid as in choices. (status poll)
     
     '''
 #     collection request trigger
