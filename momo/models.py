@@ -8,8 +8,6 @@ class MomoRequest(models.Model):
     request_text = models.CharField(max_length=240)
     description = models.TextField(blank=True, null=True)
     price = models.DecimalField(decimal_places=1, max_digits=10000)
-#     account_requested = models.ForeignKey(Personal_Account, on_delete=models.CASCADE)
-#     collection = models.BooleanField(default=True)
 
     def __str__(self):
         return self.request_text
@@ -20,6 +18,7 @@ class CollectionRequest(models.Model):
     poll = models.IntegerField(default=0)
     momo_request = models.ForeignKey(MomoRequest, on_delete=models.CASCADE)
     
+#     Status of payments
     PENDING = 'Pending'
     PAID = 'Paid'
     STATUS_CHOICES = (
@@ -38,6 +37,7 @@ class Personal_Account(models.Model):
     
     def __str__(self):
         return self.username
+    
     
     def get_name(self):
         return self.username
