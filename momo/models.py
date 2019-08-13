@@ -93,4 +93,24 @@ class Personal_Account(models.Model):
 #     except Exception as e:
 #         print("[Errno {0}] {1}".format(e.errno, e.strerror))
 #         
-        
+# 
+# class Disbursements(models.Model):
+#     headers = {
+#     # Request headers
+#     'Authorization': '',
+#     'Ocp-Apim-Subscription-Key': '{subscription key}',
+#     }
+#     
+#     params = urllib.parse.urlencode({
+#     })
+#     
+#     try:
+#         conn = http.client.HTTPSConnection('ericssonbasicapi2.azure-api.net')
+#         conn.request("POST", "/disbursement/token/?%s" % params, "{body}", headers)
+#         response = conn.getresponse()
+#         data = response.read()
+#         print(data)
+#         conn.close()
+#     except Exception as e:
+#         print("[Errno {0}] {1}".format(e.errno, e.strerror))
+#         
