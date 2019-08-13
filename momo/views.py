@@ -14,8 +14,8 @@ def index(request):
 
 def homepage_view(request, *args, **kwargs): 
     print(args, kwargs)
-#     return HttpResponse("<h2>Biyinzika home page</h2>")
-    return render(request, "templates.momo.index.html", {})
+    return HttpResponse("<h2>Biyinzika home page</h2>")
+#     return render(request, "templates.momo.index.html", {})
 
 def about_page(*args, **kwargs):
     return HttpResponse("<h3>This is a test Django product</h3>")
