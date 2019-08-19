@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-from momoapi import *
+# from momoapi import *
 # import httplib, urllib
 # import http, urllib.request, urllib.parse, urllib.error
 # import urllib, base64, http.client

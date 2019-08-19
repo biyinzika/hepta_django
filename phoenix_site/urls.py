@@ -17,12 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from momo.views import homepage_view, about_page
+from listing.views import list_view
 
 urlpatterns = [
-    path('momo/', include('momo.urls')),
     path('admin/', admin.site.urls),
-    path('home/', homepage_view, name='home'),
-    path('about/', about_page, name='about'),
+    path('listing', list_view, name='listing')
+#     path('momo/', include('momo.urls')),
+#     path('home/', homepage_view, name='home'),
+#     path('about/', about_page, name='about'),
     
     
 #     url(r'^admin/', admin.site.urls),
